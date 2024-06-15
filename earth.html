@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>История Земли</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+</head>
+<body>
+    <div class="top top-1">
+        <header class="header center">
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+            <a class="logo" href="index.html">GeoPortal.</a>
+            <nav class="menu-1">
+                <a href="index.html" class="menu">Главная</a>
+                <a href="bigbang.html" class="menu">Большой взрыв</a>
+                <a href="solarsystem.html" class="menu">Солнечная система</a>
+                <a href="moon.html" class="menu">Образование Луны</a>
+            </nav>
+        </header> 
+        <div class="line"></div>
+        <div class="top-bottom center">
+            <h1 class="title title-1">ИСТОРИЯ ЗЕМЛИ</h1>
+            <form class="title-sub title-sub-2">
+                <select class="select_order" id="earths">
+                  <option selected value="black">Чёрная Земля</option>
+                  <option value="blue">Голубая Земля</option>
+                  <option value="gray">Серая Земля</option>
+                  <option value="live">Живая Земля</option>
+                  <option value="red">Красная Земля</option>
+                  <option value="boring">Скучный миллиард</option>
+                  <option value="white">Белая Земля</option>
+                  <option value="green">Зелёная Земля</option>
+                  <option value="human">Эпоха человека</option>
+                  <option value="now">Настоящее</option>
+                  <option value="future">Будущее</option>
+                </select>
+            </form>
+            <div class="top-bottom-text">
+                <div class="top-bottom-text-sub">
+                    <p class="title-sub title-sub-1">Выберите инструмент, с помощью которого хотите изучить данный отрезок времени.</p>
+                </div>
+            </div>
+            <div class="formats">
+                <div id="myButton1" class="button-format">
+                    <a id="textButton1" href="#" class="btn-format">ВИДЕО</a>
+                </div>
+                <div id="myButton2" class="button-format">
+                    <a id="textButton2" href="#" class="btn-format">СТАТЬИ</a>
+                </div>
+                <div id="myButton3" class="button-format">
+                    <a id="textButton3" href="#" class="btn-format">ГАЛЕРЕЯ</a>
+                </div>
+            </div>
+            <div class="content">
+                <div id="hide1" class="video center">
+                    <video width="1175" controls src="img-video/videos/Black_Earth_4.mp4"></video>
+                </div>
+                <div id="hide2" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/black_earth_1.png" alt="card">
+                            <div class="article-title">Чёрная Земля</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/black_earth_2.jpg" alt="card">
+                            <div class="article-title">Новый взгляд на земные недра</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/silicium.jpg" alt="card">
+                            <div class="article-title">Где же кремний?</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/atikl3.jpg" alt="card">
+                            <div class="article-title">Новое исследование</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/materials.jpg" alt="card">
+                            <div class="article-title">Примитивный материал</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/Volcanoes.png" alt="card">
+                            <div class="article-title">Вулканы</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/SANY0073.JPG" alt="card">
+                            <div class="article-title">Геологическая летопись</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide3" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic124_4_3.png" alt="card">
+                            <div class="article-title ">Железистый метеорит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic125_4_3.png" alt="card">
+                            <div class="article-title ">Породы с церконом</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic126_4_3.png" alt="card">
+                            <div class="article-title ">Эоархейский ортогнейс</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic127_4_3.png" alt="card">
+                            <div class="article-title ">Гранитный пегматит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic128_4_3.png" alt="card">
+                            <div class="article-title ">Гранитный пегматит v2</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic129_4_3.png" alt="card">
+                            <div class="article-title ">Перидотит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic130_4_3.png" alt="card">
+                            <div class="article-title ">Палласит Springwater</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic131_4_3.png" alt="card">
+                            <div class="article-title ">Слои Земли</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic132_4_3.png" alt="card">
+                            <div class="article-title ">Базальт</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic133_4_3.png" alt="card">
+                            <div class="article-title ">Базальтовая лава Пиллоу</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide4" class="video center">
+                    <video width="1175" controls src="img-video/videos/Blue_Earth_3.mp4"></video>
+                </div>
+                <div id="hide5" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/blue_earth_1.png" alt="card">
+                            <div class="article-title">Научные исследования</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/geology.jpg" alt="card">
+                            <div class="article-title">Определение геологов</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide6" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic134_4_3.png" alt="card">
+                            <div class="article-title ">Происхождение воды</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic135_4_3.png" alt="card">
+                            <div class="article-title ">Метеорит Ивуна</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic136_4_3.png" alt="card">
+                            <div class="article-title ">Готтесманский зал</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide7" class="video center">
+                    <video width="1175" controls src="img-video/videos/Grey_Earth_3.mp4"></video>
+                </div>
+                <div id="hide8" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/grey_earth_1.png" alt="card">
+                            <div class="article-title">Дрейфующие континенты</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/scale_1200.jpeg" alt="card">
+                            <div class="article-title">Расширяющееся море</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide9" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic137_4_3.png" alt="card">
+                            <div class="article-title ">Магматическая порода</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic138_4_3.png" alt="card">
+                            <div class="article-title ">Гранит</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide10" class="video center">
+                    <video width="1175" controls src="img-video/videos/Living_Earth_3.mp4"></video>
+                </div>
+                <div id="hide11" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/living_earth.png" alt="card">
+                            <div class="article-title">Живая Земля</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide12" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic139_4_3.png" alt="card">
+                            <div class="article-title">Условия жизни</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic141_4_3.png" alt="card">
+                            <div class="article-title">Строматолиты</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide13" class="video center">
+                    <video width="1175" controls src="img-video/videos/Red_Earth_4.mp4"></video>
+                </div>
+                <div id="hide14" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/red_earth_1.png" alt="card">
+                            <div class="article-title">Красная Земля</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide15" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic142_4_3.png" alt="card">
+                            <div class="article-title">Строматолит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic143_4_3.png" alt="card">
+                            <div class="article-title">Джеспилит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic144_4_3.png" alt="card">
+                            <div class="article-title">Фотосинтезирующие организмы</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic145_4_3.png" alt="card">
+                            <div class="article-title">Дикинсония</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic146_4_3.png" alt="card">
+                            <div class="article-title">Археоциаты</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide16" class="video center">
+                    <video width="1175" controls src="img-video/videos/Boring_Earth_3.mp4"></video>
+                </div>
+                <div id="hide17" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/boaring_earth_1.png" alt="card">
+                            <div class="article-title">Скучный миллиард</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide18" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic148_4_3.png" alt="card">
+                            <div class="article-title">Пирит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic149_16_9.png" alt="card">
+                            <div class="article-title">Габбро</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic150_4_3.png" alt="card">
+                            <div class="article-title">Кварц</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic151_4_3.png" alt="card">
+                            <div class="article-title">Гематит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic152_4_3.png" alt="card">
+                            <div class="article-title">Золото в кварце</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic153_4_3.png" alt="card">
+                            <div class="article-title">Галит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic154_16_9.png" alt="card">
+                            <div class="article-title">Циркон</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide19" class="video center">
+                    <video width="1175" controls src="img-video/videos/White_Earth_3.mp4"></video>
+                </div>
+                <div id="hide20" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/white_earth_1.png" alt="card">
+                            <div class="article-title">Белая Земля</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide21" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic158_4_3.png" alt="card">
+                            <div class="article-title">Триасовая плита</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic159_4_3.png" alt="card">
+                            <div class="article-title">Формация Гоуганда</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide22" class="video center">
+                    <video width="1175" controls src="img-video/videos/Green_Earth_3.mp4"></video>
+                </div>
+                <div id="hide23" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/dino_1.jpg" alt="card">
+                            <div class="article-title">Кладбище динозавров</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/ordovician_land_plants.webp" alt="card">
+                            <div class="article-title">Появление растений</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide24" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic160_4_3.png" alt="card">
+                            <div class="article-title">Анатолийский разлом</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic161_4_3.png" alt="card">
+                            <div class="article-title">Анза Боррего</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic162_4_3.png" alt="card">
+                            <div class="article-title">Гейзер old faithful</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic163_4_3.png" alt="card">
+                            <div class="article-title">Yanjiahella Biscarpa</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic164_4_3.png" alt="card">
+                            <div class="article-title">Цикломедуза</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic165_4_3.png" alt="card">
+                            <div class="article-title">Tealliocaris Loudonensis</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic166_4_3.png" alt="card">
+                            <div class="article-title">Olenellus nevadensis</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic167_4_3.png" alt="card">
+                            <div class="article-title">Королевская Опабиния</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic168_4_3.png" alt="card">
+                            <div class="article-title">Paracyclotosaurus davidi</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic169_4_3.png" alt="card">
+                            <div class="article-title">Ихтиостега</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic171_4_3.png" alt="card">
+                            <div class="article-title">Psilotum</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic172_4_3.png" alt="card">
+                            <div class="article-title">Лепидодендрон</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic174_4_3.png" alt="card">
+                            <div class="article-title">Клинофит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic176_4_3.png" alt="card">
+                            <div class="article-title">Меганевра</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic177_4_3.png" alt="card">
+                            <div class="article-title">Синий кит</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic178_4_3.png" alt="card">
+                            <div class="article-title">Тираннозавр Рекс</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic179_4_3.png" alt="card">
+                            <div class="article-title">Фоссилия граптолита</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic180_4_3.png" alt="card">
+                            <div class="article-title">Фоссилия аммонита</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic181_4_3.png" alt="card">
+                            <div class="article-title">Dimetrodon teutonis</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic182_4_3.png" alt="card">
+                            <div class="article-title">Dimetrodon teutonis</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic183_4_3.png" alt="card">
+                            <div class="article-title">Анкилозавр</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic184_4_3.png" alt="card">
+                            <div class="article-title">Tambaroter carrolli</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic185_4_3.png" alt="card">
+                            <div class="article-title">Скелет мамонта</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide25" class="video center">
+                    <video width="1175" controls src="img-video/videos/Human_Earth.mp4"></video>
+                </div>
+                <div id="hide26" class="hidearticles">
+                    <div class="articles center">
+                    </div>
+                </div>
+                <div id="hide27" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic186_4_3.png" alt="card">
+                            <div class="article-title">«Люси»</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic187_4_3.png" alt="card">
+                            <div class="article-title">Homo heidelbergensis</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic188_4_3.png" alt="card">
+                            <div class="article-title">Пещерные рисунки</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic189_4_3.png" alt="card">
+                            <div class="article-title">Первый крупный город</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic190_4_3.png" alt="card">
+                            <div class="article-title">Колье с ракушками каури</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic191_4_3.png" alt="card">
+                            <div class="article-title">Снежные очки</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic192_4_3.png" alt="card">
+                            <div class="article-title">Расчёска</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic193_4_3.png" alt="card">
+                            <div class="article-title">Корабль Васа</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide28" class="video center">
+                    <video width="1175" controls src="img-video/videos/Now_Earth_2.mp4"></video>
+                </div>
+                <div id="hide29" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/GIS-Remote-Sensing.jpg" alt="card">
+                            <div class="article-title">Основные цели</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/Rio_Magdalena_Delta_landsat.jpg" alt="card">
+                            <div class="article-title">Долина Магдалена</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/nasa-top-15-earth-images-02.jpg" alt="card">
+                            <div class="article-title">Методы гравитации</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/ISS042-E-294940.jpeg" alt="card">
+                            <div class="article-title">Сейсмическая рефракция</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/24084146.jpg" alt="card">
+                            <div class="article-title">Эм-методы</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/4160015.jpg" alt="card">
+                            <div class="article-title">радиоактивные методы</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/4160016.jpg" alt="card">
+                            <div class="article-title">Геотермические методы</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide30" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic194_4_3.png" alt="card">
+                            <div class="article-title">Макет корабля Буран</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic195_4_3.png" alt="card">
+                            <div class="article-title">Марсоход Curiosity</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic196_4_3.png" alt="card">
+                            <div class="article-title">Союз ТМА-19М</div>
+                        </a>
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/exhibits/pic197_4_3.png" alt="card">
+                            <div class="article-title">Космический телескоп Хаббл</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide31" class="video center">
+                    <video width="1175" controls src="img-video/videos/Future_Earth.mp4"></video>
+                </div>
+                <div id="hide32" class="hidearticles">
+                    <div class="articles center">
+                        <a href="index.html" class="article">
+                            <img class="article-photo" src="img-video/articles/KLS_000001_03485_1_t222_104352.jpg" alt="card">
+                            <div class="article-title">Что ждёт нашу планету?</div>
+                        </a>
+                    </div>
+                </div>
+                <div id="hide33" class="hidearticles">
+                    <div class="articles center">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer center">
+        <div>
+          <a class="logo" href="index.html">GeoPortal.</a>
+          <p class="footer-sub">Вся информация представлена на портале исключительно в научно-образовательных и ознакомительных целях.</p>
+        </div>
+        <div class="footer-contacts">
+          <div class="footer-contacts-phone">
+            <div class="footer-contacts-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 31" fill="none">
+                <path id="path" d="M32.87 12.89C33.09 11.54 33.02 10.16 32.65 8.83C32.17 7.07 31.17 5.4 29.65 4.03C28.14 2.66 26.3 1.75 24.37 1.31C22.9 0.97 21.38 0.91 19.89 1.11" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+                <path id="path" d="M26.2 12.25C26.44 10.8 25.95 9.28 24.72 8.16C23.49 7.05 21.81 6.6 20.21 6.81" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+                <path id="path" d="M10.34 4.3L12.49 7.81C12.77 8.27 12.78 8.83 12.52 9.3L10.45 13.05C10.45 13.05 11.05 15.85 13.56 18.13C16.07 20.41 19.15 20.95 19.15 20.95L23.29 19.07C23.81 18.83 24.42 18.84 24.93 19.1L28.81 21.06C29.36 21.34 29.71 21.87 29.71 22.45L29.71 26.5C29.71 28.55 27.6 30.04 25.45 29.38C21.04 28.03 14.18 25.46 9.84 21.51C5.5 17.57 2.66 11.35 1.17 7.34C0.44 5.39 2.08 3.48 4.35 3.48L8.81 3.48C9.44 3.48 10.03 3.79 10.34 4.3Z" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <a href="tel:+79145628638" class="footer-contacts-text">+7(914)562-86-38</a>
+          </div>
+          <div class="footer-contacts-tg">
+            <div class="footer-contacts-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 27" fill="none">
+                <path id="path" d="M29.27 0.23C29.27 0.23 32.23 -0.92 31.98 1.88C31.9 3.03 31.16 7.07 30.58 11.44L28.61 24.39C28.61 24.39 28.44 26.28 26.96 26.61C25.48 26.94 23.26 25.46 22.85 25.13C22.52 24.88 16.69 21.17 14.63 19.36C14.05 18.86 13.4 17.87 14.71 16.72L23.35 8.48C24.33 7.49 25.32 5.18 21.21 7.98L9.7 15.81C9.7 15.81 8.38 16.64 5.91 15.9L0.57 14.25C0.57 14.25 -1.4 13.01 1.97 11.77C10.19 7.9 20.3 3.94 29.27 0.23Z" fill="#E55C22" fill-opacity="1.000000" fill-rule="nonzero"/>
+              </svg>
+            </div>
+            <a href="https://t.me/ssweeettieee" class="footer-contacts-text">@ssweeettieee</a>
+          </div>
+          <div class="footer-contacts-email">
+            <div class="footer-contacts-svg">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 35 25" fill="none">
+                <path id="path" d="M33 22.78L33 11.89L33 1L17 1L1 1L1 11.89L1 22.78L33 22.78Z" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round"/>
+                <path id="path" d="M1 1L17 11.89L33 1" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+                <path id="path" d="M17 1L1 1L1 11.89" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+                <path id="path" d="M33 11.89L33 1L17 1" stroke="#E55C22" stroke-opacity="1.000000" stroke-width="2.500000" stroke-linejoin="round" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <a href="mailto:sochenkoalena@mail.ru" class="footer-contacts-text">sochenkoas@dvfu.ru</a>
+          </div>
+        </div>
+      </footer>
+    <script src="./earths.js"></script>
+</body>
+</html>
