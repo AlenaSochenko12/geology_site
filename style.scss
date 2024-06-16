@@ -137,6 +137,16 @@ html {
     border-radius: 40px;
     text-align: center;
     color: #FFF;
+    &-1 {
+        width: 250px;;
+    }
+}
+.blackear {
+    display: none;
+}
+.blackeare {
+    display: flex;
+    justify-content: center;
 }
 .clicked-btn {
     border: 1px solid #E55C22; 

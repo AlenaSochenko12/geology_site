@@ -7,6 +7,13 @@
     <title>История Земли</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"></script>
+    <style>
+        /* Кнопка "Назад" будет отображаться, только когда нужно */
+        #backButton {
+            display: none;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
     <div class="top top-1">
@@ -46,47 +53,51 @@
                 </div>
             </div>
             <div class="formats">
-                <div id="myButton1" class="button-format">
+                <div id="myButton1" class="button-format button-format-1">
                     <a id="textButton1" href="#" class="btn-format">ВИДЕО</a>
                 </div>
-                <div id="myButton2" class="button-format">
+                <div id="myButton2" class="button-format button-format-1">
                     <a id="textButton2" href="#" class="btn-format">СТАТЬИ</a>
                 </div>
-                <div id="myButton3" class="button-format">
+                <div id="myButton3" class="button-format button-format-1">
                     <a id="textButton3" href="#" class="btn-format">ГАЛЕРЕЯ</a>
                 </div>
+                <div id="myButton4" class="button-format button-format-1">
+                    <a id="textButton4" href="#" class="btn-format">3D-ЗЕМЛЯ</a>
+                </div>
             </div>
-            <div class="content">
+            <div id="root"></div>
+            <div class="content" id="content">
                 <div id="hide1" class="video center">
                     <video width="1175" controls src="img-video/videos/Black_Earth_4.mp4"></video>
                 </div>
                 <div id="hide2" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article" data-id="1">
                             <img class="article-photo" src="img-video/articles/black_earth_1.png" alt="card">
                             <div class="article-title">Чёрная Земля</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article" data-id="2">
                             <img class="article-photo" src="img-video/articles/black_earth_2.jpg" alt="card">
                             <div class="article-title">Новый взгляд на земные недра</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/silicium.jpg" alt="card">
                             <div class="article-title">Где же кремний?</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/atikl3.jpg" alt="card">
                             <div class="article-title">Новое исследование</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/materials.jpg" alt="card">
                             <div class="article-title">Примитивный материал</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/Volcanoes.png" alt="card">
                             <div class="article-title">Вулканы</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/SANY0073.JPG" alt="card">
                             <div class="article-title">Геологическая летопись</div>
                         </a>
@@ -94,46 +105,51 @@
                 </div>
                 <div id="hide3" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic124_4_3.png" alt="card">
                             <div class="article-title ">Железистый метеорит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic125_4_3.png" alt="card">
                             <div class="article-title ">Породы с церконом</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic126_4_3.png" alt="card">
                             <div class="article-title ">Эоархейский ортогнейс</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic127_4_3.png" alt="card">
                             <div class="article-title ">Гранитный пегматит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic128_4_3.png" alt="card">
                             <div class="article-title ">Гранитный пегматит v2</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic129_4_3.png" alt="card">
                             <div class="article-title ">Перидотит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic130_4_3.png" alt="card">
                             <div class="article-title ">Палласит Springwater</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic131_4_3.png" alt="card">
                             <div class="article-title ">Слои Земли</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic132_4_3.png" alt="card">
                             <div class="article-title ">Базальт</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic133_4_3.png" alt="card">
                             <div class="article-title ">Базальтовая лава Пиллоу</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="blackEarth1">
+                    <div class="blackeare">
+                        <canvas id="blackEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide4" class="video center">
@@ -141,11 +157,11 @@
                 </div>
                 <div id="hide5" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/blue_earth_1.png" alt="card">
                             <div class="article-title">Научные исследования</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/geology.jpg" alt="card">
                             <div class="article-title">Определение геологов</div>
                         </a>
@@ -153,18 +169,23 @@
                 </div>
                 <div id="hide6" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic134_4_3.png" alt="card">
                             <div class="article-title ">Происхождение воды</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic135_4_3.png" alt="card">
                             <div class="article-title ">Метеорит Ивуна</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic136_4_3.png" alt="card">
                             <div class="article-title ">Готтесманский зал</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="blueEarth1">
+                    <div class="blackeare">
+                        <canvas id="blueEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide7" class="video center">
@@ -172,11 +193,11 @@
                 </div>
                 <div id="hide8" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/grey_earth_1.png" alt="card">
                             <div class="article-title">Дрейфующие континенты</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/scale_1200.jpeg" alt="card">
                             <div class="article-title">Расширяющееся море</div>
                         </a>
@@ -184,14 +205,19 @@
                 </div>
                 <div id="hide9" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic137_4_3.png" alt="card">
                             <div class="article-title ">Магматическая порода</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic138_4_3.png" alt="card">
                             <div class="article-title ">Гранит</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="grayEarth1">
+                    <div class="blackeare">
+                        <canvas id="grayEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide10" class="video center">
@@ -199,7 +225,7 @@
                 </div>
                 <div id="hide11" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/living_earth.png" alt="card">
                             <div class="article-title">Живая Земля</div>
                         </a>
@@ -207,14 +233,19 @@
                 </div>
                 <div id="hide12" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic139_4_3.png" alt="card">
                             <div class="article-title">Условия жизни</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic141_4_3.png" alt="card">
                             <div class="article-title">Строматолиты</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="livingEarth1">
+                    <div class="blackeare">
+                        <canvas id="livingEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide13" class="video center">
@@ -222,7 +253,7 @@
                 </div>
                 <div id="hide14" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/red_earth_1.png" alt="card">
                             <div class="article-title">Красная Земля</div>
                         </a>
@@ -230,26 +261,31 @@
                 </div>
                 <div id="hide15" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic142_4_3.png" alt="card">
                             <div class="article-title">Строматолит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic143_4_3.png" alt="card">
                             <div class="article-title">Джеспилит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic144_4_3.png" alt="card">
                             <div class="article-title">Фотосинтезирующие организмы</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic145_4_3.png" alt="card">
                             <div class="article-title">Дикинсония</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic146_4_3.png" alt="card">
                             <div class="article-title">Археоциаты</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="redEarth1">
+                    <div class="blackeare">
+                        <canvas id="redEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide16" class="video center">
@@ -257,7 +293,7 @@
                 </div>
                 <div id="hide17" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/boaring_earth_1.png" alt="card">
                             <div class="article-title">Скучный миллиард</div>
                         </a>
@@ -265,34 +301,39 @@
                 </div>
                 <div id="hide18" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic148_4_3.png" alt="card">
                             <div class="article-title">Пирит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic149_16_9.png" alt="card">
                             <div class="article-title">Габбро</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic150_4_3.png" alt="card">
                             <div class="article-title">Кварц</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic151_4_3.png" alt="card">
                             <div class="article-title">Гематит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic152_4_3.png" alt="card">
                             <div class="article-title">Золото в кварце</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic153_4_3.png" alt="card">
                             <div class="article-title">Галит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic154_16_9.png" alt="card">
                             <div class="article-title">Циркон</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="boringEarth1">
+                    <div class="blackeare">
+                        <canvas id="boringEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide19" class="video center">
@@ -300,7 +341,7 @@
                 </div>
                 <div id="hide20" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/white_earth_1.png" alt="card">
                             <div class="article-title">Белая Земля</div>
                         </a>
@@ -308,14 +349,19 @@
                 </div>
                 <div id="hide21" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic158_4_3.png" alt="card">
                             <div class="article-title">Триасовая плита</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic159_4_3.png" alt="card">
                             <div class="article-title">Формация Гоуганда</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="whiteEarth1">
+                    <div class="blackeare">
+                        <canvas id="whiteEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide22" class="video center">
@@ -323,11 +369,11 @@
                 </div>
                 <div id="hide23" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/dino_1.jpg" alt="card">
                             <div class="article-title">Кладбище динозавров</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/ordovician_land_plants.webp" alt="card">
                             <div class="article-title">Появление растений</div>
                         </a>
@@ -335,98 +381,103 @@
                 </div>
                 <div id="hide24" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic160_4_3.png" alt="card">
                             <div class="article-title">Анатолийский разлом</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic161_4_3.png" alt="card">
                             <div class="article-title">Анза Боррего</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic162_4_3.png" alt="card">
                             <div class="article-title">Гейзер old faithful</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic163_4_3.png" alt="card">
                             <div class="article-title">Yanjiahella Biscarpa</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic164_4_3.png" alt="card">
                             <div class="article-title">Цикломедуза</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic165_4_3.png" alt="card">
                             <div class="article-title">Tealliocaris Loudonensis</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic166_4_3.png" alt="card">
                             <div class="article-title">Olenellus nevadensis</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic167_4_3.png" alt="card">
                             <div class="article-title">Королевская Опабиния</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic168_4_3.png" alt="card">
                             <div class="article-title">Paracyclotosaurus davidi</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic169_4_3.png" alt="card">
                             <div class="article-title">Ихтиостега</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic171_4_3.png" alt="card">
                             <div class="article-title">Psilotum</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic172_4_3.png" alt="card">
                             <div class="article-title">Лепидодендрон</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic174_4_3.png" alt="card">
                             <div class="article-title">Клинофит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic176_4_3.png" alt="card">
                             <div class="article-title">Меганевра</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic177_4_3.png" alt="card">
                             <div class="article-title">Синий кит</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic178_4_3.png" alt="card">
                             <div class="article-title">Тираннозавр Рекс</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic179_4_3.png" alt="card">
                             <div class="article-title">Фоссилия граптолита</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic180_4_3.png" alt="card">
                             <div class="article-title">Фоссилия аммонита</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic181_4_3.png" alt="card">
                             <div class="article-title">Dimetrodon teutonis</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic182_4_3.png" alt="card">
                             <div class="article-title">Dimetrodon teutonis</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic183_4_3.png" alt="card">
                             <div class="article-title">Анкилозавр</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic184_4_3.png" alt="card">
                             <div class="article-title">Tambaroter carrolli</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic185_4_3.png" alt="card">
                             <div class="article-title">Скелет мамонта</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="greenEarth1">
+                    <div class="blackeare">
+                        <canvas id="greenEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide25" class="video center">
@@ -438,38 +489,43 @@
                 </div>
                 <div id="hide27" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic186_4_3.png" alt="card">
                             <div class="article-title">«Люси»</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic187_4_3.png" alt="card">
                             <div class="article-title">Homo heidelbergensis</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic188_4_3.png" alt="card">
                             <div class="article-title">Пещерные рисунки</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic189_4_3.png" alt="card">
                             <div class="article-title">Первый крупный город</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic190_4_3.png" alt="card">
                             <div class="article-title">Колье с ракушками каури</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic191_4_3.png" alt="card">
                             <div class="article-title">Снежные очки</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic192_4_3.png" alt="card">
                             <div class="article-title">Расчёска</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic193_4_3.png" alt="card">
                             <div class="article-title">Корабль Васа</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="humanEarth1">
+                    <div class="blackeare">
+                        <canvas id="humanEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide28" class="video center">
@@ -477,31 +533,31 @@
                 </div>
                 <div id="hide29" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/GIS-Remote-Sensing.jpg" alt="card">
                             <div class="article-title">Основные цели</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/Rio_Magdalena_Delta_landsat.jpg" alt="card">
                             <div class="article-title">Долина Магдалена</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/nasa-top-15-earth-images-02.jpg" alt="card">
                             <div class="article-title">Методы гравитации</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/ISS042-E-294940.jpeg" alt="card">
                             <div class="article-title">Сейсмическая рефракция</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/24084146.jpg" alt="card">
                             <div class="article-title">Эм-методы</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/4160015.jpg" alt="card">
                             <div class="article-title">радиоактивные методы</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/4160016.jpg" alt="card">
                             <div class="article-title">Геотермические методы</div>
                         </a>
@@ -509,22 +565,27 @@
                 </div>
                 <div id="hide30" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic194_4_3.png" alt="card">
                             <div class="article-title">Макет корабля Буран</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic195_4_3.png" alt="card">
                             <div class="article-title">Марсоход Curiosity</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic196_4_3.png" alt="card">
                             <div class="article-title">Союз ТМА-19М</div>
                         </a>
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/exhibits/pic197_4_3.png" alt="card">
                             <div class="article-title">Космический телескоп Хаббл</div>
                         </a>
+                    </div>
+                </div>
+                <div class="blackear" id="nowEarth1">
+                    <div class="blackeare">
+                        <canvas id="nowEarth" class="canvas"></canvas>
                     </div>
                 </div>
                 <div id="hide31" class="video center">
@@ -532,7 +593,7 @@
                 </div>
                 <div id="hide32" class="hidearticles">
                     <div class="articles center">
-                        <a href="index.html" class="article">
+                        <a class="article">
                             <img class="article-photo" src="img-video/articles/KLS_000001_03485_1_t222_104352.jpg" alt="card">
                             <div class="article-title">Что ждёт нашу планету?</div>
                         </a>
@@ -542,7 +603,13 @@
                     <div class="articles center">
                     </div>
                 </div>
+                <div class="blackear" id="futureEarth1">
+                    <div class="blackeare">
+                        <canvas id="futureEarth" class="canvas"></canvas>
+                    </div>
+                </div>
             </div>
+            <button id="backButton">Назад</button>
         </div>
     </div>
     <footer class="footer center">
@@ -582,6 +649,7 @@
           </div>
         </div>
       </footer>
-    <script src="./earths.js"></script>
+    <script type="module" src="./earths.js"></script>
+    <script type="module" src="./articles.js"></script>
 </body>
 </html>
