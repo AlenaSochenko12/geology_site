@@ -221,7 +221,54 @@ html {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.article-text {
+  display: none;
+}
 .article:hover {
+  border-color: #E55C22;
+  color: #E55C22;
+}
+
+.object {
+  display: none;
+  margin-top: 40px;
+  padding-bottom: 80px;
+}
+.object-general {
+  border: 2px solid #6b6b6b;
+  border-radius: 10px;
+  padding-bottom: 40px;
+}
+.object-title {
+  color: #db6735;
+  font-family: Golos Text;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 77px;
+  padding-top: 40px;
+  padding-left: 60px;
+}
+.object-content {
+  color: #e2e2e2;
+  font-size: 18px;
+  text-align: justify;
+  font-weight: 500;
+  padding-left: 60px;
+  padding-right: 60px;
+}
+.object-button {
+  margin-left: 60px;
+  margin-top: 40px;
+  background-color: #141210;
+  color: #e2e2e2;
+  font-size: 18px;
+  width: 150px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid #F4F4F4;
+  border-radius: 20px;
+}
+.object-button:hover {
   border-color: #E55C22;
   color: #E55C22;
 }
