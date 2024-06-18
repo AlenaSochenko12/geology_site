@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         inactiveText2.classList.add('btn-format');
         activeText.classList.remove('btn-format');
         activeText.classList.add('clicked-text');
-        console.log(active);
         return active;
     }
     const inactiveButton = (activeButton, activeText) => {

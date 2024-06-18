@@ -218,11 +218,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return { textureMap, textureBump, textureAO, textureMetall, textureNormal, textureRoughness, name };
     }
     function blackEarth(textureMap, textureBump){
-        console.log(name);
         const canvas = document.querySelector(name);
 
-        const width = 1000;
-        const height = 600;
+        const width = window.innerWidth;
+        const height = window.innerHeight;
         scene = new THREE.Scene();
 
         camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
@@ -286,7 +285,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     button3.addEventListener("click", third);
     button4.addEventListener("click", fourth);
     createTexture("img-video/textures/basecolor1.png", 'img-video/textures/height1.png', 'img-video/textures/ambientocclusion1.png', 'img-video/textures/metallic1.png', 'img-video/textures/normal1.png', 'img-video/textures/roughness1.png', '#blackEarth');
-
     initHiddens("hide1", "hide2", "hide3", "blackEarth1"); 
     function getSelectValue(e){
         let selectedValue = e.target.value;

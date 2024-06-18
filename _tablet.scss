@@ -35,6 +35,11 @@
             &-1 {
                 padding-top: 20px;
             }
+            &-3 {
+                padding-top: 30px;
+                width: auto;
+                font-size: 18px;
+            }
         }
     }
     .explosion {
@@ -87,7 +92,6 @@
             }
         }
         &-buttons {
-            display: grid;
             grid-template-columns: 200px;
             margin-top: 40px;
             padding-top: 20px;
