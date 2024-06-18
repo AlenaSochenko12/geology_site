@@ -60,6 +60,9 @@ html {
     justify-content: space-between;
     padding-bottom: 20px;
 }
+.menu2 {
+    display: none;
+}
 .menu {
     color: #fff;
     font-size: 16px;
@@ -531,4 +534,6 @@ html {
 	max-height: 740px;
 }
 
+@import 'notebook';
 @import 'tablet';
+@import 'mobile';

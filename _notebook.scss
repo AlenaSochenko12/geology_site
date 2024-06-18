@@ -1,7 +1,7 @@
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .center {
-        padding-left: calc(50% - 350px);
-        padding-right: calc(50% - 350px);
+        padding-left: calc(50% - 450px);
+        padding-right: calc(50% - 450px);
     }
     .top {
         height: auto;
@@ -10,45 +10,27 @@
         }
     }
     .logo {
-        font-size: 24px;
-    }
-    .header {
-        gap: 40px;
+        font-size: 28px;
     }
     .menu {
         font-size: 14px;
         &-1 {
-            gap: 0px;
+            padding-top: 12px;  
+            display: flex;
+            gap: 56px;
         }
-    }
-    .menu {
-        display: none;
-        font-size: 14px;
         &:hover {
             color: #E55C22;
         }
     }
-    .menu2 {
-        display: block;
-        color: #fff;
-        font-size: 14px;
-        font-weight: 500;
-        text-decoration: none;
-        line-height: 20px;
-    }
-    .menu-1 {
-        padding-top: 12px;  
-        display: flex;
-        gap: 40px;
-    }
     .title {
         width: 680px;
-        font-size: 44px;
+        font-size: 50px;
         line-height: 70px;
         padding-top: 40px;
         &-sub {
-            width: 400px;
-            padding-top: 25px;
+            width: 500px;
+            padding-top: 30px;
             font-size: 14px;
             &-1 {
                 padding-top: 20px;
@@ -60,28 +42,16 @@
             }
         }
     }
-    .team {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        font-size: 20px;
-        &-2 {
-            padding-top: 30px;
-        }
-        &-3 {
-            font-size: 24px;
-        }
-    }
     .explosion {
         padding-top: 28px;
-        padding-left: 0px;
+        padding-left: 20px;
         width: 544px;
         &-1 {
-            width: 300px;
+            width: 400px;
         }
     }
     .btn-study {
         width: 240px;
-        margin-top: 50px;
         padding-left: 10px;
         gap: 14px;
     }
@@ -94,29 +64,28 @@
     }
     .general {
         &-stripe {
-            gap: 12px;
-            height: 35px;
+            gap: 16px;
+            height: 40px;
             padding-top: 8px;
             margin-top: 60px;
             padding-left: 8px;
             padding-right: 8px;
             &-text {
-                font-size: 13px;
-                padding-top: 0px;
+                font-size: 18px;
+                padding-top: 3px;
             }
         }
         &-iconics {
-            width: 25px;
-            height: 25px;
+            width: 30px;
+            height: 30px;
         }
         &-title {
             font-size: 50px;
             line-height: 66px;
             padding-top: 170px;
             &-sub {
-                width: 600px;
                 padding-top: 30px;
-                font-size: 14px;
+                font-size: 16px;
             }
             &-2 {
                 padding-top: 0px;
@@ -139,7 +108,7 @@
 
     }
     .button-format {
-        width: 150px;
+        width: 200px;
         padding-top: 15px;
         height: 35px;
 
@@ -151,7 +120,7 @@
         font-size: 14px;
     }
     .video1 {
-        width: 700px;
+        width: 900px;
     }
     .article {
         width: 300px;
@@ -188,26 +157,27 @@
         }
       }
     .footer {
-        gap: 200px;
+        gap: 40px;
         padding-top: 24px;
-        &-sub {
-            font-size: 12px;
-            width: 220px;
-        }
         &-contacts {
-            gap: 70px;
+            gap: 28px;
             &-text {
-                font-size: 12px;
+                font-size: 14px;
                 padding-top: 4px;
-                display: none;
             }
-            &-svg {
-                width: 25px;
+            &-phone {
+                gap: 8px;
+            }
+            &-tg {
+                gap: 8px;
+            }
+            &-email {
+                gap: 8px;
             }
         }
     }
     .slider .slick-arrow{
-        width: 28px;
-        height: 28px;
+        width: 40px;
+        height: 40px;
     }
 }

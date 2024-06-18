@@ -1,7 +1,7 @@
-@media (max-width: 768px) {
+@media (max-width: 375px) {
     .center {
-        padding-left: calc(50% - 350px);
-        padding-right: calc(50% - 350px);
+        padding-left: calc(50% - 155px);
+        padding-right: calc(50% - 155px);
     }
     .top {
         height: auto;
@@ -57,6 +57,8 @@
                 padding-top: 30px;
                 width: auto;
                 font-size: 18px;
+            }
+            &-5 {
             }
         }
     }
