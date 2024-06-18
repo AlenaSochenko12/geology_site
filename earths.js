@@ -28,6 +28,36 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const textButton4 = document.getElementById('textButton4');
     let active = 0;
 
+    const objects = document.querySelectorAll('.article');
+    const content = document.getElementById('content');
+    const objectInfo = document.getElementById('object-info');
+    const titleContent = document.getElementById('title-content');
+    const infoTime = document.getElementById('info-time');
+    const infoContent = document.getElementById('info-content');
+    const backButton = document.getElementById('back-button');
+
+    function showObjectInfo(title, time, text) {
+      titleContent.textContent = `${title}`;
+      infoTime.textContent = `${time}`;
+      infoContent.innerHTML = `<p>${text}</p>`;
+      objectInfo.style.display = 'block';
+      content.style.display = 'none';
+    }
+
+    objects.forEach(object => {
+      object.addEventListener('click', function() {
+        const objectTitle = this.getAttribute('data-title');
+        const objectTime = this.getAttribute('data-time');
+        const objectText = object.querySelector('.article-text').innerHTML;
+        showObjectInfo(objectTitle, objectTime, objectText);
+      });
+    });
+
+    backButton.addEventListener('click', function() {
+      objectInfo.style.display = 'none';
+      content.style.display = 'block';
+    });
+
     const activeButton = (activeButton, inactiveButton1, inactiveButton2, inactiveButton3, activeText, inactiveText1, inactiveText2, inactiveText3) => {
         activeButton.classList.add('clicked-btn');
         inactiveButton1.classList.remove('clicked-btn');
@@ -65,6 +95,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $(`#${hide2}`).hide(); 
             $(`#${hide3}`).hide(); 
             $(`#${hide4}`).hide(); 
+            objectInfo.style.display = 'none';
+            content.style.display = 'block';
             inactiveButton(button2, textButton2);
             inactiveButton(button3, textButton3);
             inactiveButton(button4, textButton4);
@@ -88,6 +120,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $(`#${hide1}`).hide(); 
             $(`#${hide3}`).hide(); 
             $(`#${hide4}`).hide(); 
+            objectInfo.style.display = 'none';
+            content.style.display = 'block';
             inactiveButton(button1, textButton1);
             inactiveButton(button3, textButton3);
             inactiveButton(button4, textButton4);
@@ -112,6 +146,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $(`#${hide1}`).hide(); 
             $(`#${hide2}`).hide(); 
             $(`#${hide4}`).hide(); 
+            objectInfo.style.display = 'none';
+            content.style.display = 'block';
             inactiveButton(button1, textButton1);
             inactiveButton(button2, textButton2);
             inactiveButton(button4, textButton4);
@@ -137,6 +173,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $(`#${hide1}`).hide(); 
             $(`#${hide2}`).hide(); 
             $(`#${hide3}`).hide(); 
+            objectInfo.style.display = 'none';
+            content.style.display = 'block';
             inactiveButton(button1, textButton1);
             inactiveButton(button2, textButton2);
             inactiveButton(button3, textButton3);
@@ -157,6 +195,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
             $(`#${hide2}`).hide(); 
             $(`#${hide3}`).hide(); 
             $(`#${hide4}`).hide(); 
+            objectInfo.style.display = 'none';
+            content.style.display = 'block';
         }
         active = 0;
     }

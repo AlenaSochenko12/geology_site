@@ -3,11 +3,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const content = document.getElementById('content');
     const objectInfo = document.getElementById('object-info');
     const titleContent = document.getElementById('title-content');
+    const infoTime = document.getElementById('info-time');
     const infoContent = document.getElementById('info-content');
     const backButton = document.getElementById('back-button');
 
-    function showObjectInfo(title, text) {
+    function showObjectInfo(title, time, text) {
       titleContent.textContent = `${title}`;
+      infoTime.textContent = `${time}`;
       infoContent.innerHTML = `<p>${text}</p>`;
       objectInfo.style.display = 'block';
       content.style.display = 'none';
@@ -16,8 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
     objects.forEach(object => {
       object.addEventListener('click', function() {
         const objectTitle = this.getAttribute('data-title');
+        const objectTime = this.getAttribute('data-time');
         const objectText = object.querySelector('.article-text').innerHTML;
-        showObjectInfo(objectTitle, objectText);
+        showObjectInfo(objectTitle, objectTime, objectText);
       });
     });
 
