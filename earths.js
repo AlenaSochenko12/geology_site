@@ -220,8 +220,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function blackEarth(textureMap, textureBump){
         const canvas = document.querySelector(name);
 
-        const width = window.innerWidth;
-        const height = window.innerHeight;
+        let width = window.innerWidth;
+        let height = window.innerHeight; 
+        if (width <= 450) {
+            width = 367;
+            height = 400;
+        }
+        if (width >= 1680) {
+            width = 1600;
+        }
+        console.log(width, height);
         scene = new THREE.Scene();
 
         camera = new THREE.PerspectiveCamera(45, width / height, 0.1, 1000);
@@ -229,7 +237,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         scene.add(camera);
 
         renderer = new THREE.WebGLRenderer({canvas: canvas, antialias: true,});
-        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setSize(width, height);
         renderer.setPixelRatio(window.devicePixelRatio);
 
         renderer.autoClear = false;

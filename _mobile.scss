@@ -1,7 +1,7 @@
-@media (max-width: 375px) {
+@media (max-width: 426px){ //прописать
     .center {
-        padding-left: calc(50% - 155px);
-        padding-right: calc(50% - 155px);
+        padding-left: calc(50% - 150px);
+        padding-right: calc(50% - 150px);
     }
     .top {
         height: auto;
@@ -29,38 +29,52 @@
         }
     }
     .menu2 {
-        display: block;
+        display: none;
         color: #fff;
         font-size: 14px;
         font-weight: 500;
         text-decoration: none;
         line-height: 20px;
     }
-    .menu-1 {
-        padding-top: 12px;  
-        display: flex;
-        gap: 40px;
+    .menu3 {
+        display: block;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 500;
+        text-decoration: none;
+        line-height: 20px;
     }
     .title {
-        width: 680px;
-        font-size: 44px;
-        line-height: 70px;
+        width: 200px;
+        font-size: 34px;
+        line-height: 50px;
         padding-top: 40px;
         &-sub {
-            width: 400px;
-            padding-top: 25px;
-            font-size: 14px;
+            display: none;
             &-1 {
                 padding-top: 20px;
             }
+            &-2 {
+                display: block;
+            }
             &-3 {
-                padding-top: 30px;
+                display: block;
+                padding-top: 10px;
                 width: auto;
                 font-size: 18px;
             }
-            &-5 {
+            &-4 {
+                display: block;
+                width: auto;
             }
         }
+    }
+    .people {
+        font-size: 18px;
+        padding-top: 0px;
+    }
+    .select_order {
+        font-size: 14px;
     }
     .team {
         padding-top: 20px;
@@ -70,54 +84,66 @@
             padding-top: 30px;
         }
         &-3 {
-            font-size: 24px;
+            font-size: 20px;
         }
     }
     .explosion {
-        padding-top: 28px;
-        padding-left: 0px;
-        width: 544px;
-        &-1 {
-            width: 300px;
-        }
+        display: none;
     }
     .btn-study {
-        width: 240px;
+        width: 200px;
         margin-top: 50px;
-        padding-left: 10px;
-        gap: 14px;
+        padding-left: 4px;
+        gap: 8px;
     }
     .study {
-        font-size: 14px;
+        font-size: 12px;
         margin-top: 8px;
         &-btn {
             width: 35px;
         }
     }
+    .study-btn {
+        width: 30px;
+        height: 30px;
+    }
     .general {
         &-stripe {
-            gap: 12px;
+            justify-content: center;
+            gap: 20px;
             height: 35px;
             padding-top: 8px;
             margin-top: 60px;
             padding-left: 8px;
             padding-right: 8px;
             &-text {
-                font-size: 13px;
-                padding-top: 0px;
+                display: none;
+                &-1 {
+                    display: block;
+                    font-family: Golos Text;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 29px;
+                    padding-top: 0px;
+                }
             }
         }
         &-iconics {
-            width: 25px;
-            height: 25px;
+            display: none;
+            &-1 {
+                display: block;
+                width: 25px;
+                height: 25px;
+            }
         }
         &-title {
-            font-size: 50px;
-            line-height: 66px;
-            padding-top: 170px;
+            font-size: 38px;
+            line-height: 44px;
+            padding-top: 110px;
             &-sub {
-                width: 600px;
-                padding-top: 30px;
+                color: #fff;
+                width: 200px;
+                padding-top: 20px;
                 font-size: 14px;
             }
             &-2 {
@@ -125,35 +151,35 @@
             }
         }
         &-buttons {
-            grid-template-columns: 200px;
-            margin-top: 40px;
+            grid-template-columns: 180px;
+            margin-top: 30px;
             padding-top: 20px;
-            font-size: 14px;
+            font-size: 12px;
         }
     }
     .content {
         padding-top: 20px;
     }  
     .formats {
-        margin-top: 40px;
+        margin-top: 20px;
         display: flex;
         justify-content: space-around;
 
     }
     .button-format {
-        width: 150px;
+        width: 70px;
         padding-top: 15px;
         height: 35px;
 
     }
     .btn-format {
-        font-size: 14px;
+        font-size: 12px;
     }
     .clicked-text {
-        font-size: 14px;
+        font-size: 12px;
     }
     .video1 {
-        width: 700px;
+        width: 300px;
     }
     .article {
         width: 300px;
@@ -172,44 +198,64 @@
     }
     .object {
         &-title {
-            font-size: 36px;
+            font-size: 24px;
             padding-top: 24px;
-            padding-left: 60px;
-            line-height: 64px;
+            padding-left: 20px;
+            line-height: 30px;
         }
         &-time {
+            padding-left: 20px;
+            padding-top: 10px;
             font-size: 18px;
         }
         &-content {
             font-size: 16px;
+            padding-left: 20px;
+            padding-right: 20px;
         }
         &-button {
+            margin-left: 20px;
             margin-top: 20px;
             font-size: 16px;
             width: 100px;
         }
       }
     .footer {
-        gap: 200px;
-        padding-top: 24px;
+        height: 60px;
+        gap: 60px;
         &-sub {
-            font-size: 12px;
-            width: 220px;
+            display: none;
         }
         &-contacts {
-            gap: 70px;
+            padding-top: 10px;
+            gap: 20px;
             &-text {
-                font-size: 12px;
-                padding-top: 4px;
                 display: none;
             }
             &-svg {
-                width: 25px;
+                width: 20px;
             }
         }
+    }
+    .wrapper{
+        height: auto;
+        background-color: #141210;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .slider {
+		padding: 0px 0px;
+	}
+    .wrapper{
+        padding: 0px 0px;
     }
     .slider .slick-arrow{
         width: 28px;
         height: 28px;
+        margin: -30px 10px 0px 10px;
+    }
+    .canvas {
+        height: 500px;
     }
 }

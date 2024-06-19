@@ -63,6 +63,9 @@ html {
 .menu2 {
     display: none;
 }
+.menu3 {
+    display: none;
+}
 .menu {
     color: #fff;
     font-size: 16px;
@@ -326,11 +329,17 @@ html {
             font-weight: 500;
             line-height: 29px;
             padding-top: 6px;
+            &-1 {
+                display: none;
+            }
         }
     }
     &-iconics {
         width: 40px;
         height: 40px;
+        &-1 {
+            display: none;
+        }
     }
     &-title {
         color: #fff;
@@ -471,12 +480,6 @@ html {
 	position: relative;
 }
 
-@media (max-width:767px){
-	.slider {
-		padding: 0px 40px;
-	}
-}
-
 .slider .slick-arrow{
 	position: absolute;
 	margin: -30px 20px 0px 20px;
@@ -532,6 +535,8 @@ html {
 
 .slider__item img{
 	max-height: 740px;
+    display: flex;
+    justify-content: center
 }
 
 @import 'notebook';
