@@ -807,7 +807,7 @@ html {
     padding-top: 40px;
   }
   .title-sub {
-    width: 400px;
+    width: auto;
     padding-top: 25px;
     font-size: 14px;
   }
@@ -975,11 +975,9 @@ html {
     padding-left: calc(50% - 150px);
     padding-right: calc(50% - 150px);
   }
-  .top {
-    height: auto;
-  }
   .top-bottom {
     padding-bottom: 0px;
+    height: 100%;
   }
   .logo {
     font-size: 24px;
@@ -1114,7 +1112,7 @@ html {
   }
   .general-title-sub {
     color: #fff;
-    width: 200px;
+    width: 280px;
     padding-top: 20px;
     font-size: 14px;
   }
